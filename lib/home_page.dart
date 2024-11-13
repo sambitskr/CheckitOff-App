@@ -99,7 +99,7 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
                     Text(
-                      'All To Do',
+                      'All to do',
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),

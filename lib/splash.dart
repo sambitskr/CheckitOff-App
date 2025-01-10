@@ -18,7 +18,7 @@ class _SplashState extends State<Splash> {
 
   navigatetologin() async {
     await Future.delayed(
-      const Duration(milliseconds: 5000),
+      const Duration(milliseconds: 2500),
       () {},
     );
     // ignore: use_build_context_synchronously

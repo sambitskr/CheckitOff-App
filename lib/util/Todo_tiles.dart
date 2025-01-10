@@ -29,7 +29,11 @@ class ToDoTile extends StatelessWidget {
           )
         ]),
         child: Container(
-          padding: EdgeInsets.all(24),
+          padding: const EdgeInsets.all(24),
+          decoration: BoxDecoration(
+            color: Colors.yellow[100],
+            borderRadius: BorderRadius.circular(12),
+          ),
           child: Row(
             children: [
               //checkbox
@@ -43,21 +47,24 @@ class ToDoTile extends StatelessWidget {
                 ),
               ),
 
-              Text(
-                taskName,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  decoration: taskCompleted
-                      ? TextDecoration.lineThrough
-                      : TextDecoration.none,
+              Flexible(
+                child: Text(
+                  taskName,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    decoration: taskCompleted
+                        ? TextDecoration.lineThrough
+                        : TextDecoration.none,
+                    decorationColor: Colors.black, // Custom line-through color
+                    decorationThickness: 2.0, // Adjust thickness (optional)
+                  ),
+                  softWrap: true,
+                  maxLines: null,
+                  overflow: TextOverflow.visible,
                 ),
               ),
             ],
-          ),
-          decoration: BoxDecoration(
-            color: Colors.yellow[100],
-            borderRadius: BorderRadius.circular(12),
           ),
         ),
       ),

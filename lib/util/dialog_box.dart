@@ -21,18 +21,37 @@ class DialogBox extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+            const Row(
+              children: [
+                Icon(
+                  Icons.email_rounded,
+                  color: Colors.black,
+                  size: 12.84,
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
+                Text("Add New Task",
+                    style: TextStyle(fontSize: 14, color: Colors.black)),
+              ],
+            ),
             // get user input
             TextField(
-              style: TextStyle(color: Colors.black),
               controller: controller,
-              decoration: InputDecoration(
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  hintText: "Add a new Task",
-                  hintStyle: TextStyle(color: Colors.black)),
+              style: const TextStyle(color: Colors.black),
+              decoration: const InputDecoration(isDense: true),
             ),
+            // TextField(
+            //   style: TextStyle(color: Colors.black),
+            //   controller: controller,
+            //   decoration: InputDecoration(
+            //       enabledBorder: OutlineInputBorder(
+            //         borderSide: BorderSide(color: Colors.black),
+            //         borderRadius: BorderRadius.circular(10),
+            //       ),
+            //       hintText: "Add a new Task",
+            //       hintStyle: TextStyle(color: Colors.black)),
+            // ),
 
             // buttons -> save + cancel
             Row(
